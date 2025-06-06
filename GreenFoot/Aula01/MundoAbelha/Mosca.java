@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Eduardo Wessel
  * @version 2025-06-03
  */
-public class Mosca extends Actor
+public class Mosca extends Inseto
 {
     /**
      * Act - Método responsável pelas ações da mosca quando os botões Act
@@ -20,5 +20,6 @@ public class Mosca extends Actor
             turn(45-Greenfoot.getRandomNumber(90));
             
         }
-    }
+        verificarCanto();
+ }
 }

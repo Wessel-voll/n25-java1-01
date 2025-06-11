@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Classe da Aranha
  * 
  * @author Eduardo Wessel
- * @version 2025-06-05
+ * @version 2025-06-10
  */
 public class Aranha extends Inseto
 {
@@ -22,5 +22,12 @@ public class Aranha extends Inseto
             move(2);
         }
         verificarCanto();
+        interceptarAbelha();
+    }
+    
+    public void interceptarAbelha(){
+        BeeWorld beeW = (BeeWorld) getWorld();
+        // Virando em direção a abelha
+        turnTowards(beeW.getAbelha().getX(), beeW.getAbelha().getY() );
     }
 }
